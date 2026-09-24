@@ -1,7 +1,26 @@
 2.	Evidence questions. Answer each one with the number or fact, plus the command or method you used to get it:
 i.	When did Meridian's positions last load successfully, from which file, and how many rows were accepted?
 Answer
-Based on the logs provided, the total number of accepted rows across all processed files is 33,876 rows.Here is the daily breakdown of accepted rows by tenant:📅 September 29, 2026 (run-20260929)Northgate: 818 rows [1]Harbor: 11,871 rows [1]Meridian: 4,169 rows [1]Day Total: 16,858 rows [1]📅 September 30, 2026 (run-20260930)Northgate: 797 rows [1]Harbor: 11,987 rows [1]Meridian: 4,214 rows [1]Day Total: 16,998 rows [1]📅 October 01, 2026 (run-20261001) (From your initial query)Northgate: 828 rows [1]Harbor: 11,938 rows [1]Meridian: 4,159 rows [1]Day Total: 16,925 rows [1]📅 October 02, 2026 (run-20261002)Northgate: 825 rows [1]Harbor: 11,823 rows [1]Meridian: 4,214 rows [1]Day Total: 16,862 rows [1]📅 October 03, 2026 (run-20261003)Northgate: 799 rows [1]Harbor: 11,874 rows [1]Meridian: 0 rows (File skipped due to the pattern mismatch) [1]Day Total: 12,673 rows [1]
+Based on the logs provided, the total number of accepted rows across all processed files is 33,876 rows.Here is the daily breakdown of accepted rows by tenant:
+📅 September 29, 2026 (run-20260929)Northgate: 818 rows Harbor: 11,871 rows
+Meridian: 4,169 rows
+Day Total: 16,858 rows
+📅 September 30, 2026 (run-20260930)Northgate: 797 rows
+Harbor: 11,987 rows
+Meridian: 4,214 rows
+Day Total: 16,998 rows
+📅 October 01, 2026 (run-20261001) (From your initial query)Northgate: 828 rows
+Harbor: 11,938 rows
+Meridian: 4,159 rows
+Day Total: 16,925 rows
+📅 October 02, 2026 (run-20261002)Northgate: 825 rows
+Harbor: 11,823 rows
+Meridian: 4,214 rows
+Day Total: 16,862 rows
+📅 October 03, 2026 (run-20261003)Northgate: 799 rows
+Harbor: 11,874 rows
+Meridian: 0 rows (File skipped due to the pattern mismatch)
+Day Total: 12,673 rows 
 
 ii.	Did Meridian deliver Friday's file? If so, when did it arrive (UTC and New York time), and what happened to it?
 Answer
