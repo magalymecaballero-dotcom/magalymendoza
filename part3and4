@@ -1,0 +1,26 @@
+1.	From this incident: one thing you would take on so that this class of problem can't recur, or gets caught within minutes instead of by the client. What would you build or change, how would you know it worked, and what would you need from engineering?
+
+Answer
+I would create a custom CloudWatch metric named `SuccessfulFilesProcessedCount`, segmented by tenant. Based on this metric, I would configure a "Missing Data Invalidation" (heartbeat) alarm.
+Testing Phase (Staging Simulation): In the test environment, we will intentionally deploy an incorrect regex configuration change (replicating what revision 88 did). If the new CloudWatch alarm triggers and generates a ticket/alert in our messaging system
+Production Phase: We will see a reduction to zero "ghost data" incidents.
+From engineering we will need to modify the final block of the ingestion script (where the message "tenant run complete" is printed) and have Engineering validate critical delivery windows (SLAs) with clients (Northgate, Harbor, Meridian) to precisely adjust grace periods for "no-data" alarms.
+
+
+2.	Your direction: where you want to grow over the next 6–12 months, and why. What would you have to show for it at 30, 60 and 90 days?
+I want to be proficient in AWS and be proficient in IA. I have to show that I have a great communication skills It allows you to explain abstract concepts (such as microservices architecture or zero-day vulnerabilities) to managers, clients, or end users in a clear, accessible, and value-oriented language.
+
+
+3.	Staying on track: how you would keep yourself accountable, how we would see your progress, and what you'd want from your manager.
+My progress can be seen based on metrics and customer satisfaction.
+I want from my manager to have and open mindset and be willing to collaborate 
+
+
+4.	When support gets busy: how you'd handle the trade-off.
+Prioritizing incidents and making sure to proceed accordingly to the severity. 
+
+
+AI usage note (~10 min, ~5 bullets)
+Copilot help to answer professionally 
+Synapse to provide the numbers in the triage exercise 
+Jira that provides with a Handover Ticket Template that can be filled. 
