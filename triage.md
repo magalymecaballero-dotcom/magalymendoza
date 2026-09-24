@@ -51,4 +51,17 @@ No, the 5xx error alert from Saturday isn't related to the 04:00 UTC deployment 
 The load balancer returned a total of nine 5xx responses at the data point captured just before resetting (2026-10-03 02:24:00). Given that the alarm requires exceeding a threshold of 25.0 to remain active, we know that error responses were significantly higher (over 25 per minute) during the preceding two minutes, but the incident was rapidly self-mitigated within 180 seconds.
 
 
+The commands used 
+
+aws s3 ls s3://tu-bucket-de-logs-alb/AWSLogs/111122223333/elasticloadbalancing/eu-west-2/2026/10/03/ \
+    | grep "20261003T02"
+
+For cloudwatch
+
+
+aws logs start-query \
+    --log-group-name "lh-prod-alb-access-logs" \
+    --start-time $(date -d "2026-10-03T02:15:00Z" +%s) \
+    --end-time $(date -d "2026-10-03T02:30:00Z" +%s) \
+    --query-string 'fields @timestamp, requestUri, status, targetStatus | filter status >= 500 | sort @timestamp asc'
 
